@@ -1,0 +1,67 @@
+<div class ="row">
+
+	<div class="large-12 columns">
+
+		<nav class ="top-bar">
+
+			<ul class="title-area">
+
+				<h4><li class="Home"><%= link_to "Gourmand Plate", root_path %></li></h4>
+
+			</ul>
+
+			<section class="top-bar-section"> 
+
+				<ul class="right"> 
+
+					<li><%= link_to "About", about_path %></li>
+					<li><%= link_to "Help", help_path %></li>
+					<li><%= link_to "Contact", contact_path %></li>
+					<li><%= link_to "Create Account", '#' %></li>
+					<li><%= link_to "Sign In", '#' %></li>
+
+
+				</ul>
+
+			</section>
+
+		</nav>
+
+	</div>
+
+</div>
+
+<div class="row">
+	<div class="small-9 columns">
+				
+			<a href="#" data-dropdown="drop1" class="button dropdown">Cities</a>
+			<ul id="drop1" data-dropdown-content class="f-dropdown">
+				<li><%= link_to "Boston", '#' %></li>
+				<li><%= link_to "Los Angeles", '#' %></li>
+				<li><%= link_to "New York City", '#' %></li>
+			</ul>
+
+		
+	
+		
+			<a href="#" class="button radius">Current City</a>
+
+	
+		
+			<a href="#" data-dropdown="drop2" class="button dropdown">Cuisines</a>
+			<ul id="drop2" data-dropdown-content class="f-dropdown">
+				<li><%= link_to "Asian", '#' %></li>
+				<li><%= link_to "American", '#' %></li>
+				<li><%= link_to "French", '#' %></li>
+				<li><%= link_to "Italian", '#' %></li>
+				<li><%= link_to "Japanese", '#' %></li>
+			</ul>
+	</div>
+
+	<div class="small-3 columns">
+		<input type="text" placeholder="Search cuisine type or user" />
+	</div>
+</div>
+
+
+		
