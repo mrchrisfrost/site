@@ -1,0 +1,4 @@
+ 
+@import "custom.scss"; 
+
+needs to be placed at the top of the application.css file to modify some of the foundation attributes
