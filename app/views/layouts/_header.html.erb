@@ -1,67 +1,80 @@
 <div class ="row">
 
-	<div class="large-12 columns">
+  <div class="large-12 columns">
 
-		<nav class ="top-bar">
+    <nav class ="top-bar" data-topbar data-options="is_hover: false">
 
-			<ul class="title-area">
+      <ul class="title-area">
 
-				<h4><li class="Home"><%= link_to "Gourmand Plate", root_path %></li></h4>
+        <h4><li class="Home"><%= link_to "Gourmand Plate", root_path %></li></h4>
 
-			</ul>
+      </ul>
 
-			<section class="top-bar-section"> 
+      <section class="top-bar-section"> 
 
-				<ul class="right"> 
+        <ul class="right"> 
 
-					<li><%= link_to "About", about_path %></li>
-					<li><%= link_to "Help", help_path %></li>
-					<li><%= link_to "Contact", contact_path %></li>
-					<li><%= link_to "Create Account", signup_path %></li>
-					<li><%= link_to "Sign In", '#' %></li>
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "About", about_path %></li>
+          <li><%= link_to "Help", help_path %></li>
+          <li><%= link_to "Contact", contact_path %></li>
 
+            <% if signed_in? %> 
+              <li><%= link_to "Users", '#' %></li>
+                <li class="has-dropdown">
+                  <a href="#">Account</a>
+                  <ul class="dropdown">
+                    <li><%= link_to "Profile", current_user %></li>
+                    <li><%= link_to "Settings", '#' %></li>
+                    <li><%= link_to "Sign out", signout_path, method: "delete" %></li>
+                  </ul>
+                </li>
+            <% else %>
+              <li><%= link_to "Create Account", signup_path %></li>
+              <li><%= link_to "Sign In", signin_path %></li>
+            <% end %>
 
-				</ul>
+        </ul>
 
-			</section>
+      </section>
 
-		</nav>
+    </nav>
 
-	</div>
+  </div>
 
 </div>
 
 <div class="row">
-	<div class="small-9 columns">
-				
-			<a href="#" data-dropdown="drop1" class="button dropdown">Cities</a>
-			<ul id="drop1" data-dropdown-content class="f-dropdown">
-				<li><%= link_to "Boston", '#' %></li>
-				<li><%= link_to "Los Angeles", '#' %></li>
-				<li><%= link_to "New York City", '#' %></li>
-			</ul>
+  <div class="small-9 columns">
+        
+      <a href="#" data-dropdown="drop1" class="button dropdown">Cities</a>
+      <ul id="drop1" data-dropdown-content class="f-dropdown">
+        <li><%= link_to "Boston", '#' %></li>
+        <li><%= link_to "Los Angeles", '#' %></li>
+        <li><%= link_to "New York City", '#' %></li>
+      </ul>
 
-		
-	
-		
-			<a href="#" class="button radius">Current City</a>
+    
+  
+    
+      <a href="#" class="button radius">Current City</a>
 
-	
-		
-			<a href="#" data-dropdown="drop2" class="button dropdown">Cuisines</a>
-			<ul id="drop2" data-dropdown-content class="f-dropdown">
-				<li><%= link_to "Asian", '#' %></li>
-				<li><%= link_to "American", '#' %></li>
-				<li><%= link_to "French", '#' %></li>
-				<li><%= link_to "Italian", '#' %></li>
-				<li><%= link_to "Japanese", '#' %></li>
-			</ul>
-	</div>
+  
+    
+      <a href="#" data-dropdown="drop2" class="button dropdown">Cuisines</a>
+      <ul id="drop2" data-dropdown-content class="f-dropdown">
+        <li><%= link_to "Asian", '#' %></li>
+        <li><%= link_to "American", '#' %></li>
+        <li><%= link_to "French", '#' %></li>
+        <li><%= link_to "Italian", '#' %></li>
+        <li><%= link_to "Japanese", '#' %></li>
+      </ul>
+  </div>
 
-	<div class="small-3 columns">
-		<input type="text" placeholder="Search cuisine type or user" />
-	</div>
+  <div class="small-3 columns">
+    <input type="text" placeholder="Search cuisine type or user" />
+  </div>
 </div>
 
 
-		
+    

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gourmand Plate | Sign up</title>
+    <title>Gourmand Plate | Sign In</title>
 
     <%= stylesheet_link_tag "application" %>
     <%= javascript_include_tag "/vendor/modernizr" %>
@@ -15,38 +15,30 @@
 
   
 
-  <h1 align="center">Sign up</h1>
-
+  <h1 align="center">Sign In</h1>
+  
   <div class="row">
+    <div class="small-4 columns">
+      Insert more content on this side
+    </div>
   	<div class="small-4 columns">
-  		insert content here
+
+      <%= form_for(:session, url: sessions_path) do |f| %> 
+
+        <%= f.label :email %> 
+        <%= f.text_field :email %> 
+
+        <%= f.label :password %> 
+        <%= f.password_field :password %> 
+        
+        <%= f.submit "Sign in", class: "button radius round" %>
+      <% end %> 
+
+     
+      <p>New user? <%= link_to "Sign up now!", signup_path %> </p>
   	</div>
-  	<div class="small-4 columns">
-  		
-  		
-  		<%= form_for(@user) do |f| %> 
-  			<%= render 'shared/error_messages' %> 
-
-  			<%= f.label :name %> 
-  			<%= f.text_field :name %>
-
-  			<%= f.label :email %> 
-  			<%= f.text_field :email %>
-
-  			<%= f.label :password %> 
-  			<%= f.password_field :password %> 
-
-  			<%= f.label :password_confirmation, "Confirmation" %> 
-  			<%= f.password_field :password_confirmation %>
-
-  			<%= f.submit "Create my account", class: "button radius round" %>
-  		<% end %>
-  		
-  	</div>
-  	<div class="small-4 columns"></div>
+    <div class="small-4 columns"></div>
   </div>
-  
-  
   
 
 
@@ -59,7 +51,7 @@
     <script src="assets/javascripts/foundation.topbar.js"></script> 
     <script src="assets/javascripts/foundation.tooltip.js"></script> 
     <script src="assets/javascripts/foundation.reveal.js"></script>
-    <script src="assets/javascripts/foundation.dropdown.js"></scripts>
+    <script src="assets/javascripts/foundation.dropdown.js"></script>
     <script>
       $(document).foundation();
     </script>
