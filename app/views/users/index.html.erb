@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>All users</title> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    
+    <h1 align="center">All users</h1>
+    
+    <ul class="users">
+      <% @users.each do |user| %>
+
+        <li>
+          
+          
+             <%= render user %>
+        </li>
+
+      <% end %>
+    </ul>
+
+
+    
+
+  
+    <div id='main-content'>
+    <%= yield %>
+    </div>
+    <%= javascript_include_tag "application" %>
+
+ 
+
+   </body>
+</html>
+

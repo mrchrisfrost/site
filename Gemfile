@@ -7,6 +7,7 @@ gem 'foundation-rails'
 gem 'compass-rails'
 gem 'modernizer'
 gem 'sprockets'
+gem 'faker'
 
 
 group :development, :test do 
