@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Edit user</title> 
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+    <h1 align="center">Update your profile</h1>
+
+    <div class="row">
+        
+      <div class="small-12 columns">
+        
+        <%= form_for(@user) do |f| %> 
+          <%= render 'shared/error_messages' %>
+
+          <%= f.label :name %>
+          <%= f.text_field :name %> 
+
+          <%= f.label :email %>
+          <%= f.text_field :email %> 
+
+          <%= f.label :password %> 
+          <%= f.password_field :password %> 
+
+          <%= f.label :password_confirmation, "Confirm Password" %>
+          <%= f.password_field :password_confirmation %> 
+
+          <%= f.submit "Save changes", class: "large button" %> 
+        <% end %>
+
+        <a href="#">change</a>
+
+      </div>
+
+
+    </div>
+
+   
+
+   </body>
+</html>
+
