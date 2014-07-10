@@ -10,6 +10,7 @@
 /* mixins, variables, etc. */ 
 $grayMediumLight: #eaeaea; 
 $grayLighter: #D8D8D8;
+$grayLight: #848484;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -61,5 +62,29 @@ input {
 		&:last-child {
 		  border-bottom: 1px solid $grayLighter; 
 		}
+	}
+}
+
+/* microposts */
+
+.microposts { 
+	list-style: none;
+	margin: 10px 0 0 0; 
+
+	li {
+		padding: 10px 0;
+		border-top: 1px solid #e8e8e8;
+	}
+}
+.content {
+	display: block; 
+}
+.timestamp { 
+	color: $grayLight;
+}
+aside { 
+	textarea {
+		height: 100px;
+		margin-bottom: 5px;
 	}
 }

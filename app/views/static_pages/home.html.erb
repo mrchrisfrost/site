@@ -36,6 +36,26 @@
   </p>
 
   <div class="row">
+    <div class="small-4 columns">
+      
+      <% if signed_in? %> 
+      <%= render 'shared/user_info' %>
+
+    </div>
+    <div class="small-4 columns">
+      
+      <%= render 'shared/micropost_form' %>
+
+    </div>
+    <div class="small-4 columns">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+
+  <% else %>
+
+  <div class="row">
 
   	<div class="small-6 columns">
 
@@ -62,3 +82,4 @@
     
   </body>
 </html>
+<% end %>
